@@ -1,0 +1,36 @@
+﻿@model ASPTest.Models.Order
+
+<h2>Добавление груза</h2>
+<form asp-action="ViewOrder" asp-controller="Home">
+    <p>
+        <label>Номер груза: @Model.Id</label>
+
+    </p>
+    <p>
+        <label>Город отправителя: @Model.CitySender</label>
+
+    </p>
+    <p>
+        <label>Адрес отправителя: @Model.AdressSender</label>
+
+    </p>
+    <p>
+        <label>Город получателя: @Model.CityRecipient</label>
+
+    </p>
+    <p>
+        <label>Адрес получателя: @Model.AdressRecipient</label>
+
+    </p>
+    <p> 
+        <label>Вес груза: @Model.Weight</label>
+        
+    </p>
+    <p>
+        <label>Дата получения груза: @Model.Date</label>
+
+    </p>
+    <p>
+        <a asp-action="Index" asp-controller="Home">Назад</a>
+    </p>
+</form>

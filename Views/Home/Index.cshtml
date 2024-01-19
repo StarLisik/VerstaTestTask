@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ASPTest.Models.Order>
+
+<h2>Список грузов</h2>
+<p><a href="/Home/Create">Добавить груз</a></p>
+<table class="table">
+    <tr>
+        <th>Номер груза</th>
+        <th>Город отправителя</th>
+        <th>Адрес отправителя</th>
+        <th>Город получателя</th>
+        <th>Адрес получателя</th>
+        <th>Вес груза</th>
+        <th>Дата забора груза</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr onclick="location.href='@Url.Action("ViewOrder", "Home", new {
+            id = item.Id,
+            citySender = item.CitySender,
+            adressSender = item.AdressSender,
+            cityRecipient = item.CityRecipient,
+            adressRecipient = item.AdressRecipient,
+            weight = item.Weight,
+            date = item.Date
+        })'">
+            <td>@item.Id</td>
+            <td>@item.CitySender</td>
+            <td>@item.AdressSender</td>
+            <td>@item.CityRecipient</td>
+            <td>@item.AdressRecipient</td>
+            <td>@item.Weight</td>
+            <td>@item.Date</td>
+        </tr>
+    }
+</table>

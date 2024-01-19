@@ -1,0 +1,32 @@
+﻿@model ASPTest.Models.Order
+
+<h2>Добавление груза</h2>
+<form asp-action="Create" asp-controller="Home">
+    <p>
+        <label asp-for="CitySender">Город отправителя</label><br />
+        <input type="text" asp-for="CitySender" />
+    </p>
+    <p>
+        <label asp-for="AdressSender">Адрес отправителя</label><br />
+        <input type="text" asp-for="AdressSender" />
+    </p>
+    <p>
+        <label asp-for="CityRecipient">Город получателя</label><br />
+        <input type="text" asp-for="CityRecipient" />
+    </p>
+    <p>
+        <label asp-for="AdressRecipient">Адрес получаателя</label><br />
+        <input type="text" asp-for="AdressRecipient" />
+    </p>
+    <p>
+        <label asp-for="Weight">Вес груза</label><br />
+        <input type="number" asp-for="Weight" />
+    </p>
+    <p>
+        <label asp-for="Date">Дата забора груза</label><br />
+        <input type="datetime" asp-for="Date" />
+    </p>
+    <p>
+        <input type="submit" value="Подтвердить" />
+    </p>
+</form>
